@@ -51,35 +51,24 @@ Each stage acts as a filter, so only the most promising ligands are carried forw
 ---
 
 ## Repository Structure
-.
-├── 01_ligand_library_curation/
-│   ├── 01.merge_unique_sdf.py
-│   ├── 02.4_layer_filtering.py
-│   ├── 03.sdf_to_pdbqt_by_id.py
-│   ├── 04.prepare_all_ligands.py
-│   ├── prepare_ligand4.py
-│   ├── logs/                       # Filtering run logs & reports
-│   └── rules/                      # Filtering pipeline flowchart & rule definitions
-│
-├── 02_consensus_docking/
-│   ├── 01_ligand_preparation/      # Batch ligand prep for docking
-│   ├── 02_docking_execution_data_arrange/
-│   │   ├── ad4/                    # AutoDock4-GPU docking (GPF/DPF, maps, logs)
-│   │   ├── dock6/                  # DOCK6 pipeline (spheres → grid → min → rigid/flex dock)
-│   │   ├── vina/                   # AutoDock Vina docking
-│   │   └── vinardo/                # Vinardo scoring function docking
-│   ├── 03_Generate_Fingerprints/   # Per-engine rerun + interaction fingerprint scripts
-│   ├── 03_raw_data_collection/     # Aggregated raw docking outputs
-│   └── 04_consensus_and_ranking/   # Cross-engine consensus scoring & ranking
-│
-├── 03_mmpbsa_binding_energies/     # MM-PBSA rescoring, prioritization mapping
-├── 04_molecular_dynamics_200ns/    # 200 ns production MD, DCCM/allosteric analysis
-├── 05_umbrella_sampling_pmf/       # Umbrella sampling windows, PMF profiles
-├── 06_quantum_mechanics_descriptors/ # Multiwfn parsing, QM descriptor scripts
-├── 07_admet_predictions/           # ADMET profile outputs
-│
-├── LICENSE
-└── README.md
+
+├── 01_ligand_library_curation          # Stage 1: HT virtual database curation & filtration
+│   ├── rules                           # Computational workflow diagrams and PDF funnels
+│   └── logs                            # High-throughput molecular filtration datasets
+├── 02_consensus_docking                # Stage 2: Cross-platform multi-engine virtual screening
+│   ├── 01_ligand_preparation           # United-atom/all-atom coordinate preprocessing scripts
+│   ├── 02_docking_execution_data_arrange # Native execution scripts and receptor map parameters
+│   │   ├── ad4                         # AutoDock4-GPU Lamarckian Genetic Algorithm suite
+│   │   ├── dock6                       # UCSF DOCK6 gridbox energy minimizations & spheres
+│   │   ├── vina                        # AutoDock Vina multi-threaded docking pathways
+│   │   └── vinardo                     # Steric-optimized Vinardo execution configurations
+│   ├── 03_Generate_Fingerprints        # Structural pose fingerprinting wrappers
+│   └── 04_consensus_and_ranking        # Intersecting candidate consensus matrix processors
+├── 03_mmpbsa_binding_energies          # Stage 3: Thermodynamic binding free energy triage
+├── 04_molecular_dynamics_200ns         # Stage 4: 200 ns production trajectory parameters
+├── 05_umbrella_sampling_pmf            # Stage 5: Reaction coordinate potential landscape tools
+├── 06_quantum_mechanics_descriptors    # Stage 6: DFT active site electronic pre-organization
+└── 07_admet_predictions                # Stage 7: Druggability indices and safety profiles
 
 > **Note:** Large intermediate outputs (trajectories, docking maps, raw pose files) are excluded from version control via `.gitattributes`/`.gitignore` conventions — only scripts, configs, and summary data are tracked. Regenerate bulk outputs by rerunning the corresponding stage script(s).
 
