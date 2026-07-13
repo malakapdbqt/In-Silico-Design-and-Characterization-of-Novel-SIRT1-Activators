@@ -1,0 +1,106 @@
+REMARK  16 active torsions:
+REMARK  status: ('A' for Active; 'I' for Inactive)
+REMARK    1  A    between atoms: P1_1  and  O5_17 
+REMARK    2  A    between atoms: P1_1  and  O9_27 
+REMARK    3  A    between atoms: P2_2  and  O5_17 
+REMARK    4  A    between atoms: P2_2  and  O10_29 
+REMARK    5  A    between atoms: C1_3  and  N7_22 
+REMARK    6  A    between atoms: C2_6  and  N2_7 
+REMARK    7  A    between atoms: C4_12  and  O13_35 
+REMARK    8  A    between atoms: N4_13  and  C18_41 
+REMARK    9  A    between atoms: C5_15  and  O14_37 
+REMARK       I    between atoms: N6_19  and  C20_43 
+REMARK   10  A    between atoms: O6_20  and  C7_21 
+REMARK   11  A    between atoms: O7_23  and  C8_24 
+REMARK   12  A    between atoms: C9_26  and  C20_43 
+REMARK   13  A    between atoms: O9_27  and  C15_38 
+REMARK   14  A    between atoms: O10_29  and  C16_39 
+REMARK   15  A    between atoms: C11_30  and  C15_38 
+REMARK   16  A    between atoms: C12_32  and  C16_39 
+ROOT
+ATOM      1  P1  NAD C 660      48.940  60.020  37.950  1.00  0.00     0.417 P 
+ATOM      2  O1  NAD C 660      50.230  59.340  37.680  1.00  0.00    -0.624 OA
+ATOM      3  O3  NAD C 660      48.930  60.460  39.380  1.00  0.00    -0.624 OA
+ENDROOT
+BRANCH   1   4
+ATOM      4  O5  NAD C 660      47.840  59.030  37.650  1.00  0.00    -0.180 OA
+BRANCH   4   5
+ATOM      5  P2  NAD C 660      47.540  57.930  38.730  1.00  0.00     0.417 P 
+ATOM      6  O2  NAD C 660      46.860  56.890  37.930  1.00  0.00    -0.624 OA
+ATOM      7  O4  NAD C 660      48.610  57.160  39.360  1.00  0.00    -0.624 OA
+BRANCH   5   8
+ATOM      8  O10 NAD C 660      46.570  58.700  39.740  1.00  0.00    -0.287 OA
+BRANCH   8   9
+ATOM      9  C16 NAD C 660      46.080  58.090  40.950  1.00  0.00     0.216 C 
+BRANCH   9  10
+ATOM     10  C12 NAD C 660      47.320  57.810  42.000  1.00  0.00     0.180 C 
+ATOM     11  O12 NAD C 660      48.040  59.030  42.120  1.00  0.00    -0.353 OA
+ATOM     12  C2  NAD C 660      47.380  59.740  43.220  1.00  0.00     0.259 C 
+ATOM     13  C5  NAD C 660      46.510  58.680  44.040  1.00  0.00     0.198 C 
+ATOM     14  C8  NAD C 660      46.900  57.370  43.410  1.00  0.00     0.182 C 
+BRANCH  12  15
+ATOM     15  N2  NAD C 660      46.700  60.970  42.620  1.00  0.00    -0.336 N 
+ATOM     16  C6  NAD C 660      45.430  61.410  42.860  1.00  0.00     0.110 C 
+ATOM     17  C9  NAD C 660      44.940  62.700  42.480  1.00  0.00     0.047 C 
+ATOM     18  C13 NAD C 660      45.800  63.550  41.730  1.00  0.00     0.020 C 
+ATOM     19  C17 NAD C 660      47.020  63.050  41.360  1.00  0.00     0.018 C 
+ATOM     20  C19 NAD C 660      47.500  61.820  41.860  1.00  0.00     0.093 C 
+BRANCH  17  21
+ATOM     21  C20 NAD C 660      43.560  63.170  42.890  1.00  0.00     0.250 C 
+ATOM     22  N6  NAD C 660      42.990  63.920  41.930  1.00  0.00    -0.366 N 
+ATOM     23  H9  NAD C 660      43.630  64.230  41.210  1.00  0.00     0.159 HD
+ATOM     24  H10 NAD C 660      42.110  64.370  42.160  1.00  0.00     0.159 HD
+ATOM     25  O11 NAD C 660      43.000  62.790  43.870  1.00  0.00    -0.268 OA
+ENDBRANCH  17  21
+ENDBRANCH  12  15
+BRANCH  13  26
+ATOM     26  O14 NAD C 660      46.910  58.680  45.420  1.00  0.00    -0.388 OA
+ATOM     27  H19 NAD C 660      46.310  58.060  45.880  1.00  0.00     0.210 HD
+ENDBRANCH  13  26
+BRANCH  14  28
+ATOM     28  O7  NAD C 660      48.120  56.800  44.050  1.00  0.00    -0.390 OA
+ATOM     29  H13 NAD C 660      48.000  56.460  44.960  1.00  0.00     0.210 HD
+ENDBRANCH  14  28
+ENDBRANCH   9  10
+ENDBRANCH   8   9
+ENDBRANCH   5   8
+ENDBRANCH   4   5
+ENDBRANCH   1   4
+BRANCH   1  30
+ATOM     30  O9  NAD C 660      48.600  61.250  37.010  1.00  0.00    -0.287 OA
+BRANCH  30  31
+ATOM     31  C15 NAD C 660      49.190  61.290  35.780  1.00  0.00     0.216 C 
+BRANCH  31  32
+ATOM     32  C11 NAD C 660      48.290  60.630  34.700  1.00  0.00     0.180 C 
+ATOM     33  C7  NAD C 660      49.100  60.390  33.370  1.00  0.00     0.182 C 
+ATOM     34  C4  NAD C 660      48.260  61.160  32.250  1.00  0.00     0.198 C 
+ATOM     35  C1  NAD C 660      46.990  61.480  32.950  1.00  0.00     0.262 C 
+ATOM     36  O8  NAD C 660      47.260  61.550  34.370  1.00  0.00    -0.353 OA
+BRANCH  33  37
+ATOM     37  O6  NAD C 660      49.110  58.990  32.920  1.00  0.00    -0.390 OA
+ATOM     38  H11 NAD C 660      49.990  58.580  33.030  1.00  0.00     0.210 HD
+ENDBRANCH  33  37
+BRANCH  34  39
+ATOM     39  O13 NAD C 660      48.910  62.380  31.770  1.00  0.00    -0.388 OA
+ATOM     40  H18 NAD C 660      49.820  62.100  31.560  1.00  0.00     0.210 HD
+ENDBRANCH  34  39
+BRANCH  35  41
+ATOM     41  N7  NAD C 660      46.250  62.610  32.470  1.00  0.00    -0.294 N 
+ATOM     42  C10 NAD C 660      45.210  62.640  31.540  1.00  0.00     0.166 A 
+ATOM     43  N3  NAD C 660      44.840  61.700  30.640  1.00  0.00    -0.222 NA
+ATOM     44  C14 NAD C 660      44.640  63.820  31.700  1.00  0.00     0.144 A 
+ATOM     45  C3  NAD C 660      43.780  62.040  29.950  1.00  0.00     0.237 A 
+ATOM     46  N1  NAD C 660      43.070  63.150  30.060  1.00  0.00    -0.228 NA
+ATOM     47  C18 NAD C 660      43.470  64.070  30.950  1.00  0.00     0.135 A 
+ATOM     48  N5  NAD C 660      45.280  64.600  32.560  1.00  0.00    -0.236 NA
+ATOM     49  C21 NAD C 660      46.310  63.860  32.970  1.00  0.00     0.214 C 
+BRANCH  47  50
+ATOM     50  N4  NAD C 660      43.050  65.340  30.780  1.00  0.00    -0.285 NA
+ATOM     51  H5  NAD C 660      43.560  65.900  31.450  1.00  0.00     0.125 HD
+ATOM     52  H6  NAD C 660      43.110  65.590  29.800  1.00  0.00     0.125 HD
+ENDBRANCH  47  50
+ENDBRANCH  35  41
+ENDBRANCH  31  32
+ENDBRANCH  30  31
+ENDBRANCH   1  30
+TORSDOF 16

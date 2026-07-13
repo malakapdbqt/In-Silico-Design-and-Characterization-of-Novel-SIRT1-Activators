@@ -1,0 +1,13 @@
+&general
+startframe=20,
+endframe=101,
+interval=2,
+verbose=1
+/
+&gb
+igb=5
+/
+&decomp
+idecomp=1
+/
+
