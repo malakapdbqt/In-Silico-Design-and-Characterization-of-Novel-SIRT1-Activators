@@ -1,4 +1,4 @@
-markdown# In Silico Design and Characterization of Novel SIRT1 Activators
+# In Silico Design and Characterization of Novel SIRT1 Activators
 
 A complete, reproducible computational pipeline for the discovery and characterization of novel small-molecule SIRT1 activators — spanning ligand library curation, consensus molecular docking, binding free-energy estimation, molecular dynamics, umbrella sampling, quantum mechanical descriptor generation, and ADMET prediction.
 
