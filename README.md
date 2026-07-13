@@ -56,14 +56,15 @@ Unlike isolated docking studies, this workflow applies **multi-scale validation*
 
 ```mermaid
 graph LR
-A[Ligand Library] --> B[Filtering]
-B --> C[Docking (4 Engines)]
-C --> D[Consensus Selection]
-D --> E[MM/PBSA]
-E --> F[MD Simulation 200 ns]
-F --> G[Umbrella Sampling]
-G --> H[QM Analysis]
-H --> I[ADMET Prediction]
+
+A[📦 Ligand Library] --> B[🧹 Filtering]
+B --> C[⚡ Docking - 4 Engines]
+C --> D[🧠 Consensus Selection]
+D --> E[💧 MM/PBSA]
+E --> F[🌊 MD Simulation - 200 ns]
+F --> G[⛰️ Umbrella Sampling]
+G --> H[⚛️ QM Analysis]
+H --> I[🧪 ADMET]
 📊 Key Metrics
 🧪 5338 compounds screened
 🎯 3557 retained after filtering
