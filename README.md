@@ -51,25 +51,72 @@ Each stage acts as a filter, so only the most promising ligands are carried forw
 ---
 
 ## Repository Structure
+.
+├── 01_ligand_library_curation/
+│   ├── logs/
+│   └── rules/
+│
+├── 02_consensus_docking/
+│   ├── 01_ligand_preparation/
+│   ├── 02_docking_execution_data_arrange/
+│   │   ├── ad4/
+│   │   │   ├── dpf_gpf_files/
+│   │   │   └── ligands_prepared_hs/
+│   │   ├── dock6/
+│   │   │   ├── doc6_2/
+│   │   │   │   ├── 001_structure/
+│   │   │   │   ├── 002_spheres/
+│   │   │   │   ├── 003_gridbox/
+│   │   │   │   ├── 004_energy_min/
+│   │   │   │   ├── 005_rigid_dock/
+│   │   │   │   ├── 006_flex_dock/
+│   │   │   │   ├── 007_footprint/
+│   │   │   │   ├── 008_virtual_screen/
+│   │   │   │   ├── 009_gen_alg/
+│   │   │   │   └── 010_de_novo/
+│   │   │   └── ligands_mol2/
+│   │   ├── vina/
+│   │   │   └── all_prepared_ligand/
+│   │   └── vinardo/
+│   │       └── all_prepared_ligand/
+│   ├── 03_Generate_Fingerprints/
+│   ├── 03_raw_data_collection/
+│   └── 04_consensus_and_ranking/
+│
+├── 03_mmpbsa_binding_energies/
+├── 04_molecular_dynamics_200ns/
+├── 05_umbrella_sampling_pmf/
+│   ├── pmf_profiles/
+│   └── pulling_mdp/
+├── 06_quantum_mechanics_descriptors/
+│   ├── Multiwfn_parses/
+│   └── scripts/
+├── 07_admet_predictions/
+│   └── profiles/
+│
+├── LICENSE
+└── README.md
 
-├── 01_ligand_library_curation          # Stage 1: HT virtual database curation & filtration
-│   ├── rules                           # Computational workflow diagrams and PDF funnels
-│   └── logs                            # High-throughput molecular filtration datasets
-├── 02_consensus_docking                # Stage 2: Cross-platform multi-engine virtual screening
-│   ├── 01_ligand_preparation           # United-atom/all-atom coordinate preprocessing scripts
-│   ├── 02_docking_execution_data_arrange # Native execution scripts and receptor map parameters
-│   │   ├── ad4                         # AutoDock4-GPU Lamarckian Genetic Algorithm suite
-│   │   ├── dock6                       # UCSF DOCK6 gridbox energy minimizations & spheres
-│   │   ├── vina                        # AutoDock Vina multi-threaded docking pathways
-│   │   └── vinardo                     # Steric-optimized Vinardo execution configurations
-│   ├── 03_Generate_Fingerprints        # Structural pose fingerprinting wrappers
-│   └── 04_consensus_and_ranking        # Intersecting candidate consensus matrix processors
-├── 03_mmpbsa_binding_energies          # Stage 3: Thermodynamic binding free energy triage
-├── 04_molecular_dynamics_200ns         # Stage 4: 200 ns production trajectory parameters
-├── 05_umbrella_sampling_pmf            # Stage 5: Reaction coordinate potential landscape tools
-├── 06_quantum_mechanics_descriptors    # Stage 6: DFT active site electronic pre-organization
-└── 07_admet_predictions                # Stage 7: Druggability indices and safety profiles
+**Folder-by-folder purpose:**
 
+| Path | Contents |
+|---|---|
+| `01_ligand_library_curation/` | Library merge/filter/prep scripts · `logs/` filtering reports · `rules/` filtering flowchart & rule docs |
+| `02_consensus_docking/01_ligand_preparation/` | Batch ligand prep shared across all 4 docking engines |
+| `02_consensus_docking/02_docking_execution_data_arrange/ad4/` | AutoDock4-GPU: grid files, prepared ligands, run/rename scripts |
+| `02_consensus_docking/02_docking_execution_data_arrange/dock6/` | DOCK6: staged pipeline (structure → spheres → gridbox → energy min → rigid/flex dock → footprint/screen/de novo) |
+| `02_consensus_docking/02_docking_execution_data_arrange/vina/` | AutoDock Vina docking + prepared ligands |
+| `02_consensus_docking/02_docking_execution_data_arrange/vinardo/` | Vinardo scoring function docking + prepared ligands |
+| `02_consensus_docking/03_Generate_Fingerprints/` | Per-engine rerun + interaction fingerprint scripts |
+| `02_consensus_docking/03_raw_data_collection/` | Aggregated raw docking outputs |
+| `02_consensus_docking/04_consensus_and_ranking/` | Cross-engine consensus scoring, ranking, top-pose collection |
+| `03_mmpbsa_binding_energies/` | MM-PBSA rescoring, prioritization mapping |
+| `04_molecular_dynamics_200ns/` | 200 ns production MD, DCCM/allosteric network analysis |
+| `05_umbrella_sampling_pmf/` | Umbrella sampling windows (`pulling_mdp/`) and PMF profiles (`pmf_profiles/`) |
+| `06_quantum_mechanics_descriptors/` | QM descriptor scripts + Multiwfn parses |
+| `07_admet_predictions/` | Per-compound ADMET prediction profiles |
+
+> Large intermediate outputs (trajectories, docking maps, raw pose files) are excluded from version control — only scripts, configs, and summary data are tracked.
 > **Note:** Large intermediate outputs (trajectories, docking maps, raw pose files) are excluded from version control via `.gitattributes`/`.gitignore` conventions — only scripts, configs, and summary data are tracked. Regenerate bulk outputs by rerunning the corresponding stage script(s).
 
 ---
