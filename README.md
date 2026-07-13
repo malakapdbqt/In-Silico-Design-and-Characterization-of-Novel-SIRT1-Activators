@@ -114,10 +114,10 @@ Each stage acts as a filter, so only the most promising ligands are carried forw
 | `02_consensus_docking/03_raw_data_collection/` | Aggregated docking outputs |
 | `02_consensus_docking/04_consensus_and_ranking/` | Cross-engine consensus scoring and ranking |
 | `03_mmpbsa_binding_energies/` | MM/PBSA calculations and prioritization |
-| `04_molecular_dynamics_200ns/` | MD simulations and dynamic analysis |
-| `05_umbrella_sampling_pmf/` | PMF calculations and umbrella sampling |
-| `06_quantum_mechanics_descriptors/` | QM descriptor calculations |
-| `07_admet_predictions/` | ADMET profiling |
+| `04_molecular_dynamics_200ns/` | MD simulations and dynamic analysis |> ⏳ **Active Workspace Notice:**
+| `05_umbrella_sampling_pmf/` | PMF calculations and umbrella sampling |> ⏳ **Active Workspace Notice:**
+| `06_quantum_mechanics_descriptors/` | QM descriptor calculations |> ⏳ **Active Workspace Notice:**
+| `07_admet_predictions/` | ADMET profiling |> ⏳ **Active Workspace Notice:**
 > Large intermediate outputs (trajectories, docking maps, raw pose files) are excluded from version control — only scripts, configs, and summary data are tracked.
 > **Note:** Large intermediate outputs (trajectories, docking maps, raw pose files) are excluded from version control via `.gitattributes`/`.gitignore` conventions — only scripts, configs, and summary data are tracked. Regenerate bulk outputs by rerunning the corresponding stage script(s).
 
