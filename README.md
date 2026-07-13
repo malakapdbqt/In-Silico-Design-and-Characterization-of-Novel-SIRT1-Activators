@@ -305,10 +305,9 @@ To rerun the full workflow end-to-end on a new receptor/ligand set:
 ## Citation
 
 If you use this workflow or any part of it in your own research, please cite:
-[Author Name]. "In Silico Design and Characterization of Novel SIRT1 Activators."
-[Thesis/Institution, Year]. GitHub repository: [repo URL]
+[KUMARA BVMS]. "In Silico Design and Characterization of Novel SIRT1 Activators."
+[Will be Updated]
 
-*(Replace with your actual citation details.)*
 
 ---
 
