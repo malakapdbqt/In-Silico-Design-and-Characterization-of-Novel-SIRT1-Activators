@@ -50,7 +50,9 @@ Each stage acts as a filter, so only the most promising ligands are carried forw
 
 ---
 
-## Repository Structure
+## 📂 Repository Structure
+
+```bash
 .
 ├── 01_ligand_library_curation/
 │   ├── logs/
@@ -96,26 +98,26 @@ Each stage acts as a filter, so only the most promising ligands are carried forw
 │
 ├── LICENSE
 └── README.md
+```
 
-**Folder-by-folder purpose:**
+## 📘 Folder-by-Folder Purpose
 
-| Path | Contents |
-|---|---|
-| `01_ligand_library_curation/` | Library merge/filter/prep scripts · `logs/` filtering reports · `rules/` filtering flowchart & rule docs |
-| `02_consensus_docking/01_ligand_preparation/` | Batch ligand prep shared across all 4 docking engines |
-| `02_consensus_docking/02_docking_execution_data_arrange/ad4/` | AutoDock4-GPU: grid files, prepared ligands, run/rename scripts |
-| `02_consensus_docking/02_docking_execution_data_arrange/dock6/` | DOCK6: staged pipeline (structure → spheres → gridbox → energy min → rigid/flex dock → footprint/screen/de novo) |
-| `02_consensus_docking/02_docking_execution_data_arrange/vina/` | AutoDock Vina docking + prepared ligands |
-| `02_consensus_docking/02_docking_execution_data_arrange/vinardo/` | Vinardo scoring function docking + prepared ligands |
-| `02_consensus_docking/03_Generate_Fingerprints/` | Per-engine rerun + interaction fingerprint scripts |
-| `02_consensus_docking/03_raw_data_collection/` | Aggregated raw docking outputs |
-| `02_consensus_docking/04_consensus_and_ranking/` | Cross-engine consensus scoring, ranking, top-pose collection |
-| `03_mmpbsa_binding_energies/` | MM-PBSA rescoring, prioritization mapping |
-| `04_molecular_dynamics_200ns/` | 200 ns production MD, DCCM/allosteric network analysis |
-| `05_umbrella_sampling_pmf/` | Umbrella sampling windows (`pulling_mdp/`) and PMF profiles (`pmf_profiles/`) |
-| `06_quantum_mechanics_descriptors/` | QM descriptor scripts + Multiwfn parses |
-| `07_admet_predictions/` | Per-compound ADMET prediction profiles |
-
+| Path | Description |
+|------|------------|
+| `01_ligand_library_curation/` | Library merging, filtering, preparation; includes logs and filtering rules |
+| `02_consensus_docking/01_ligand_preparation/` | Shared ligand preparation for all docking engines |
+| `02_consensus_docking/02_docking_execution_data_arrange/ad4/` | AutoDock4-GPU workflow and prepared ligands |
+| `02_consensus_docking/02_docking_execution_data_arrange/dock6/` | Full DOCK6 pipeline (structure → docking → screening) |
+| `02_consensus_docking/02_docking_execution_data_arrange/vina/` | AutoDock Vina docking |
+| `02_consensus_docking/02_docking_execution_data_arrange/vinardo/` | Vinardo scoring docking |
+| `02_consensus_docking/03_Generate_Fingerprints/` | Interaction fingerprint generation |
+| `02_consensus_docking/03_raw_data_collection/` | Aggregated docking outputs |
+| `02_consensus_docking/04_consensus_and_ranking/` | Cross-engine consensus scoring and ranking |
+| `03_mmpbsa_binding_energies/` | MM/PBSA calculations and prioritization |
+| `04_molecular_dynamics_200ns/` | MD simulations and dynamic analysis |
+| `05_umbrella_sampling_pmf/` | PMF calculations and umbrella sampling |
+| `06_quantum_mechanics_descriptors/` | QM descriptor calculations |
+| `07_admet_predictions/` | ADMET profiling |
 > Large intermediate outputs (trajectories, docking maps, raw pose files) are excluded from version control — only scripts, configs, and summary data are tracked.
 > **Note:** Large intermediate outputs (trajectories, docking maps, raw pose files) are excluded from version control via `.gitattributes`/`.gitignore` conventions — only scripts, configs, and summary data are tracked. Regenerate bulk outputs by rerunning the corresponding stage script(s).
 
